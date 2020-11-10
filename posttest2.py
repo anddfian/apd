@@ -2,7 +2,7 @@ import os
 import time
 
 #Biodata
-biodata = ['Undefined', 'Undefined', '0', '0.0', '0']
+biodata = ['Undefined', 'Undefined', '0', '0.0', 'Undefined']
 
 #SmartHome
 smarthome = ['0','0','0','0','0']
@@ -326,11 +326,11 @@ def biodata_menikah():
         if(insert_menikah == "1"):
             print("Status: Menikah")
             biodata.pop(4)
-            biodata.insert(4,"1")
+            biodata.insert(4,"Menikah")
         elif(insert_menikah == "2"):
             print("Status: Belum Menikah")
             biodata.pop(4)
-            biodata.insert(4,"0")
+            biodata.insert(4,"Belum Menikah")
         cek = str(input("Apakah Status sudah benar? ('Y' untuk menyimpan): "))
         if(cek == "Y"):
             back_to_biodata()
