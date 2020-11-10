@@ -3,6 +3,7 @@
 - Kelas: Informatika A 2020
 - Dosen Pembimbing: Ir. Edy Budiman, S.Pd.,MT / Muhammad Bambang F, M.Kom
 - Asisten Laboratorium: Ade | Daffa | Irvan | Shafa
+- Bahasa Pemrograman: Python
 
 # Praktikum
 Tanggal & Jam Pelaksanaan Praktikum: 9 November 2020 08:00-10:00 WITA
