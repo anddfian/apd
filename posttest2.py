@@ -27,7 +27,7 @@ def show_menu():
 
     if(selected_menu == "1"):
         show_menu_biodata()
-    if(selected_menu == "2"):
+    elif(selected_menu == "2"):
         show_menu_smarthome()
     elif(selected_menu == "3"):
         show_menu_aritmatika()
