@@ -26,6 +26,8 @@ Hasil:
 - Versi: 1.0
 - Pengembang: Andi Alfian Bahtiar (2009106002)
 - Line Code: 728
+- Variabel Input: 94
+- Tipe Data: str,int,float,boolean
 - Menu:
 - [1] Biodata
 - [2] Smarthome
