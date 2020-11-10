@@ -11,3 +11,4 @@ Kegiatan:
 2. Perhitungan volume dari bangun ruang balok
 3. Perhitungan rumus fisika dari energi potensial (ep)
 4. Konversi dolar ke rupiah
+5. Konversi rupiah ke dolar
