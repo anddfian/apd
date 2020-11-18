@@ -8,12 +8,11 @@ while True:
         angka = int(input("Masukkan angka: "))
         z = 1
         a = 1
-        while z < angka:
+        while z <= angka:
             print (a)
             a += 1
             if a == 10:
                 a -= 9
-                z -= 1
             z += 1
         break
     except ValueError:
