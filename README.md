@@ -37,3 +37,36 @@ Hasil:
 - [5] Operasi Penugasan
 - [6] Tentang Aplikasi
 - [0] Keluar
+
+# Posttest #3
+Tanggal Pelaksanaan Posttest #3: 17 - 20 November 2020
+Materi : Percabangan
+1. Sule memiliki toko kue dimana 1 kue keju seharga 6000 dan 1 kue coklat seharga 3500. Setiap hari Sule hanya memproduksi 25 kue keju dan 35 kue coklat. Untuk meramaikan tokonya Sule memberikan sebuah promo. Yaitu:
+- Jika membeli 5 kue coklat hingga 20 mendapat diskon 7%.
+- Jika membeli 21 kue coklat hingga 35 mendapat diskon 12%.
+- Jika membeli 4 kue keju hingga 15 mendapat diskon 10%
+- Jika membeli 16 kue keju hingga 25 mendapat diskon 15%
+
+Materi : Perulangan
+2. Outputkan sebuah perulangan angka(1-9) kembali lagi ke 1 dengan input menggunakan NIM kalian + 10. 
+Contoh : NIM 1715016003
+
+Hasil:
+#1
+- Nama Aplikasi: Kasir Toko Kue Sule
+- Versi: 1.0
+- Pengembang: Andi Alfian Bahtiar (2009106002)
+- Line Code: xxx
+- Variabel Input: xx
+- Tipe Data: str,int,float
+
+- Menu:
+- [1] Kasir
+- [0] Keluar
+
+#2
+- Versi: 1.0
+- Pengembang: Andi Alfian Bahtiar (2009106002)
+- Line Code: 21
+- Variabel Input: 1
+- Tipe Data: int
