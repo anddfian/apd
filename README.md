@@ -56,12 +56,13 @@ Hasil:
 - Nama Aplikasi: Kasir Toko Kue Sule
 - Versi: 1.0
 - Pengembang: Andi Alfian Bahtiar (2009106002)
-- Line Code: xxx
-- Variabel Input: xx
+- Line Code: 186
+- Variabel Input: 6
 - Tipe Data: str,int,float
 
 - Menu:
 - [1] Kasir
+- [2] Stock
 - [0] Keluar
 
 #2
