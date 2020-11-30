@@ -86,3 +86,4 @@ Kriteria Projek Akhir:
 Hasil:
 Tema: Covid-19
 Judul: Deteksi Dini Mandiri Covid-19
+Flowchart: https://drive.google.com/file/d/1_QgbMHW__0QL7FWZMrNs4BDra5KTllAE/view?usp=sharing
