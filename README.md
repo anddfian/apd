@@ -71,3 +71,18 @@ Hasil:
 - Line Code: 21
 - Variabel Input: 1
 - Tipe Data: int
+
+# Proyek Akhir
+Tema:
+- Bebas (Tidak boleh sama, dilis di google spreadsheet)
+- Dapat berguna dalam kehidupan sehari-hari **
+
+Kriteria Projek Akhir:
+- Setiap kelompok beranggotakan 3-4 orang (diacak) (ada di google spreadsheet)
+- Wajib konsul dengan aslab pembimbing yang telah dibagi (ada di google spreadsheet)
+- Wajib mencakup modul 1-6 (selebihnya nilai +)
+- Wajib menggunakan CRUD (Create, Read, Update, Delete) **
+
+Hasil:
+Tema: Covid-19
+Judul: Deteksi Dini Mandiri Covid-19
