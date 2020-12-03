@@ -84,6 +84,19 @@ Kriteria Projek Akhir:
 - Wajib menggunakan CRUD (Create, Read, Update, Delete) **
 
 Hasil:
-Tema: Covid-19
-Judul: Deteksi Dini Mandiri Covid-19
-Flowchart: https://drive.google.com/file/d/1_QgbMHW__0QL7FWZMrNs4BDra5KTllAE/view?usp=sharing
+- Tema: Covid-19
+- Judul: Deteksi Dini Mandiri Covid-19
+- Flowchart: https://drive.google.com/file/d/1_QgbMHW__0QL7FWZMrNs4BDra5KTllAE/view?usp=sharing
+- Versi: 1.0
+- Pengembang: 
+  - Andi Alfian Bahtiar (2009106002) 
+  - Muhammad Gusti Keyandi E. (2009106003) 
+  - Ihsan Magribi (2009106107) 
+  - Rena Indah Choirunnisa (2009106126)
+- Line Code: 2720
+- Tipe Data: str,int
+- Level User:
+- [1] Guest
+- [2] User
+- [3] Dinkes
+- [4] Admin
