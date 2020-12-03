@@ -62,7 +62,7 @@ def check_file():
     if not os.path.exists(csv_filename_covid):
         with open(csv_filename_covid, 'w') as csv_file:
             covids = []
-            fieldnames = ['JENIS','TANGGAL','TERKONFIRMASI','KASUS_AKTIF','SEMBUH','MENINGGAL','SUSPEK','DISCARDED','PROBABLE','MENUNGGU_HASIL_LAB']
+            fieldnames = ['JENIS','TANGGAL','NEGARA','TERKONFIRMASI','KASUS_AKTIF','SEMBUH','MENINGGAL','SUSPEK','DISCARDED','PROBABLE','MENUNGGU_HASIL_LAB']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
             writer.writeheader()
             for new_data in covids:
@@ -99,7 +99,7 @@ def show_auth():
     print("|                                  DI                                  |")
     print("|                APLIKASI DETEKSI DINI MANDIRI COVID-19                |")
     print("|                                 OLEH                                 |")
-    print("|       KELOMPOK 1 - INFORMATIKA A 2020 - UNIVERSITAS MULAWARMAN       |")
+    print("|        KELOMPOK 19 - INFORMATIKA 2020 - UNIVERSITAS MULAWARMAN       |")
     print("========================================================================")
     print("| [1] Daftar Akun                                                      |")
     print("| [2] Masuk Akun                                                       |")
@@ -721,7 +721,6 @@ def deteksi_lanjutan():
     print("==================================================================================")
     print("| Info: Silahkan Menjawab Pertanyaan berikut dengan jujur sesuai kondisi anda    |")
     print("|       saat ini                                                                 |")
-    print("|       Isi 'q' untuk membatalkan deteksi dini mandiri COVID-19                  |")
     print("==================================================================================")
     print("|                              GEJALA YANG DIRASAKAN                             |")
     print("==================================================================================")
@@ -1549,7 +1548,7 @@ def tentang_aplikasi():
     print("| Nama Aplikasi        : Deteksi Dini Mandiri COVID-19          |")
     print("| Versi                : 1.0                                    |")
     print("| Pengembang           : Andi Alfian Bahtiar  (2009106002)      |")
-    print("|                      : Muhammad Gusti Keyandi E. (2009106006) |")
+    print("|                      : Muhammad Gusti Keyandi E. (2009106003) |")
     print("|                      : Ihsan Magribi (2009106107)             |")
     print("|                      : Rena Indah Choirunnisa (2009106126)    |")
     print("| Donasi Pengembangan  : 056301058860507 (BRI)                  |")
@@ -2084,25 +2083,22 @@ def show_kritiksaran():
         csv_reader = csv.DictReader(csv_file)
         for row in csv_reader:
             krisan.append(row)
-    for data in krisan:
-        if(data_akun[0] == "dinkes"):
-            if (data['JENIS'] == "Dinkes"):
-                print("| Nama: %s" % data['NAMA'])
-                print("| Kritik: %s" % data['KRITIK'])
-                print("| Saran: %s" % data['SARAN'])
-            else:
-                print("==============================================================")
-                print("| Error: Tidak ada data ditemukan!                           |")
-                print("==============================================================")
-        elif(data_akun[0] == "admin"):
-            if (data['JENIS'] == "Developer"):
-                print("| Nama: %s" % data['NAMA'])
-                print("| Kritik: %s" % data['KRITIK'])
-                print("| Saran: %s" % data['SARAN'])
-            else:
-                print("==============================================================")
-                print("| Error: Tidak ada data ditemukan!                           |")
-                print("==============================================================")
+    if(len(krisan) > 0):
+        for data in krisan:
+            if(data_akun[0] == "dinkes"):
+                if(data['JENIS'] == "Dinkes"):
+                    print("| Nama: %s" % data['NAMA'])
+                    print("| Kritik: %s" % data['KRITIK'])
+                    print("| Saran: %s" % data['SARAN'])
+            elif(data_akun[0] == "admin"):
+                if(data['JENIS'] == "Developer"):
+                    print("| Nama: %s" % data['NAMA'])
+                    print("| Kritik: %s" % data['KRITIK'])
+                    print("| Saran: %s" % data['SARAN'])
+    else:
+        print("==============================================================")
+        print("| Error: Tidak ada data ditemukan!                           |")
+        print("==============================================================")
     back_to_menu()
 
 def show_account():
@@ -2142,45 +2138,45 @@ def create_account():
     print("========================================================================")
     print("| Info: Silakan isi Nama, Username, Password, dan Kode Unik akun       |")
     print("========================================================================")
-    nama = str(input("Nama                : "))
+    nama = str(input("Nama                 : "))
     if(len(nama) < 1):
         print("========================================================================")
         print("| Error: Anda tidak dapat mengkosongkan Nama                           |")
         print("========================================================================")
         back_to_menu()
     try:
-        umur = int(input("Umur (Contoh: 18)   : "))
+        umur = int(input("Umur (Contoh: 18)    : "))
     except ValueError:
         print("========================================================================")
         print("| Error: Ups! Itu bukan nomor yang valid. Coba lagi...                 |")
         print("========================================================================")
         back_to_menu()
     try:
-        nohp = int(input("No. HP/WA           : "))
+        nohp = int(input("No. HP/WA            : "))
     except ValueError:
         print("========================================================================")
         print("| Error: Ups! Itu bukan nomor yang valid. Coba lagi...                 |")
         print("========================================================================")
         back_to_menu()
-    alamat = str(input("Alamat              : "))
+    alamat = str(input("Alamat               : "))
     if(len(alamat) < 1):
         print("========================================================================")
         print("| Error: Anda tidak dapat mengkosongkan Alamat                         |")
         print("========================================================================")
         back_to_menu()
-    alamat2 = str(input("Kelurahan / Desa    : "))
+    alamat2 = str(input("Kelurahan / Desa     : "))
     if(len(alamat2) < 1):
         print("========================================================================")
         print("| Error: Anda tidak dapat mengkosongkan Kelurahan / Desa               |")
         print("========================================================================")
         back_to_menu()
-    username = str(input("Username            : "))
+    username = str(input("Username             : "))
     if not(len(username) > 3):
         print("========================================================================")
         print("| Error: Username minimal 4 huruf/angka!                               |")
         print("========================================================================")
         show_menu()
-    password = str(input("Password            : "))
+    password = str(input("Password             : "))
     if not(len(password) > 7):
         print("========================================================================")
         print("| Error: Password minimal 8 huruf/angka!                               |")
@@ -2415,8 +2411,6 @@ def update_data_covid(tingkat):
     if(tingkat == "Samarinda"):
         print("|                 UPDATE DATA COVID SAMARINDA                |")
     print("==============================================================")
-    print("| Info : Isi 'q' untuk membatalkan dan kembali ke menu       |")
-    print("==============================================================")
     covids = []
     with open(csv_filename_covid, mode="r") as csv_file:
         csv_reader = csv.DictReader(csv_file)
@@ -2426,6 +2420,7 @@ def update_data_covid(tingkat):
         if(data['JENIS'] == "Dunia" and tingkat == "Dunia"):
             print("| Data Covid %s" % (data['JENIS']))
             print("| Update Terakhir      : %s" % data["TANGGAL"])
+            print("| Negara               : %d" % int(data["NEGARA"]))
             print("| Terkonfirmasi        : %d" % int(data["TERKONFIRMASI"]))
             print("| Meninggal            : %d" % int(data["MENINGGAL"]))
             print("==============================================================")
@@ -2467,7 +2462,14 @@ def update_data_covid(tingkat):
     for data in covids:
         if (data['JENIS'] == tingkat):
             if(data['JENIS'] == "Dunia"):
-                update_terakhir = str(input("Update Terakhir baru   : "))
+                update_terakhir =  str(input("Update Terakhir baru   : "))
+                try:
+                    negara = int(input("Update Negara baru     : "))
+                except ValueError:
+                    print("==============================================================")
+                    print("| Error: Ups! Itu bukan nomor yang valid. Coba lagi...       |")
+                    print("==============================================================")
+                    back_to_menu()
                 try:
                     terkonfirmasi = int(input("Terkonfirmasi baru     : "))
                 except ValueError:
@@ -2483,6 +2485,7 @@ def update_data_covid(tingkat):
                     print("==============================================================")
                     back_to_menu()
                 covids[indeks]['TANGGAL'] = update_terakhir
+                covids[indeks]['NEGARA'] = negara
                 covids[indeks]['TERKONFIRMASI'] = terkonfirmasi
                 covids[indeks]['MENINGGAL'] = meninggal
                 print("==============================================================")
@@ -2614,7 +2617,7 @@ def update_data_covid(tingkat):
                 print("==============================================================")
         indeks = indeks + 1
     with open(csv_filename_covid, mode="w") as csv_file:
-        fieldnames = ['JENIS','TANGGAL','TERKONFIRMASI','KASUS_AKTIF','SEMBUH','MENINGGAL','SUSPEK','DISCARDED','PROBABLE','MENUNGGU_HASIL_LAB']
+        fieldnames = ['JENIS','TANGGAL','NEGARA','TERKONFIRMASI','KASUS_AKTIF','SEMBUH','MENINGGAL','SUSPEK','DISCARDED','PROBABLE','MENUNGGU_HASIL_LAB']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
         for new_data in covids:
