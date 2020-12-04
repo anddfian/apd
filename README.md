@@ -93,7 +93,7 @@ Hasil:
   - Muhammad Gusti Keyandi E. (2009106003) 
   - Ihsan Magribi (2009106107) 
   - Rena Indah Choirunnisa (2009106126)
-- Line Code: 2720
+- Line Code: 2725
 - Tipe Data: str,int
 - Level User:
 - [1] Guest
