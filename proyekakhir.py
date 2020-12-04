@@ -2023,24 +2023,29 @@ def kritikdansaran_developer():
     print("======================================================================")
     kritik = str(input("Kritik> "))
     saran = str(input("Saran> "))
-    if(data_akun[0] == "guest"):
-        with open(csv_filename_kritiksaran, mode='a') as csv_file:
-            fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            writer.writerow({'JENIS': "Developer", 'NAMA': "Guest", 'KRITIK': kritik, 'SARAN': saran})
+    if(len(kritik) > 0 or len(saran) > 0):
+        if(data_akun[0] == "guest"):
+            with open(csv_filename_kritiksaran, mode='a') as csv_file:
+                fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                writer.writerow({'JENIS': "Developer", 'NAMA': "Guest", 'KRITIK': kritik, 'SARAN': saran})
+            print("======================================================================")
+            print("| Sukses: Kritik dan saran berhasil disimpan!                        |")
+            print("======================================================================")
+        elif(data_akun[0] == "user"):
+            with open(csv_filename_kritiksaran, mode='a') as csv_file:
+                fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                writer.writerow({'JENIS': "Developer", 'NAMA': data_akun[1], 'KRITIK': kritik, 'SARAN': saran})
+        elif(data_akun[0] == "dinkes"):
+            with open(csv_filename_kritiksaran, mode='a') as csv_file:
+                fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
+                writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+                writer.writerow({'JENIS': "Developer", 'NAMA': data_akun[1], 'KRITIK': kritik, 'SARAN': saran})
+    else:
         print("======================================================================")
-        print("| Sukses: Kritik dan saran berhasil disimpan!                        |")
+        print("| Error: Kritik atau saran harus diisi!                              |")
         print("======================================================================")
-    elif(data_akun[0] == "user"):
-        with open(csv_filename_kritiksaran, mode='a') as csv_file:
-            fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            writer.writerow({'JENIS': "Developer", 'NAMA': data_akun[1], 'KRITIK': kritik, 'SARAN': saran})
-    elif(data_akun[0] == "dinkes"):
-        with open(csv_filename_kritiksaran, mode='a') as csv_file:
-            fieldnames = ['JENIS', 'NAMA', 'KRITIK', 'SARAN']
-            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
-            writer.writerow({'JENIS': "Developer", 'NAMA': data_akun[1], 'KRITIK': kritik, 'SARAN': saran})
     back_to_menu()
 
 def kritikdansaran_dinkes():
